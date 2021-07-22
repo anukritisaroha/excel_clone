@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+    font-family: "Montserrat",sans-serif;
+}
+.container{
+    height: 100vh;
+    width:100vw;
+
+}
+
+.titlebar{
+    outline: none;
+    height: 4%;
+    
+   background-color:#27ae60;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.menubar{
+    height: 4%;
+    
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.menubar div{
+    margin-left: 20px;
+    color: black;
+    
+}
+.menubar-options{
+    height: 8%;
+    background-color: #2ecc71;
+    display: flex;
+
+}
+
+
+ .formula-section{
+    height: 4%;
+    display: flex;
+    
+}
+.formula-section .selected-cell{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    background-color:white;
+    align-items: center;
+    border: 1px solid;
+    
+}
+.formula-section input{
+    
+    display: block;
+    height: 100%;
+    width: 80%;
+    background-color:white;
+    border: none;
+    outline: none;
+    border: 1px solid;
+}
+.grid{
+    height: 76%;
+    /* row inside the grid */
+    overflow: auto; 
+    position: relative; 
+}
+.bottom{
+    height: 4%;
+    background-color: #27ae60;
+} 
+
+ .corner{
+    height: 30px; 
+    /* display inline take space that is req */
+    width:30px;
+    background-color: grey;
+    position: fixed;
+    top:20vh;
+     /* for z index position is necessary */
+     /* z-index: 10; */
+    left: 0; 
+    
+}
+ .row-no-section{
+     /* inline block bcz div take whole horizontal space inline block take req space */
+    display: inline-block;
+    position: fixed;
+     top:calc(20vh + 30px);
+    left: 0; 
+    /* z index -ve so that when we scroll vo chup jae baki ke niche vrna vo abhi stack pr uper sbko overlap krre the z index km ho gya sbse ab vo ovelap nhi kr paenge  */
+    z-index: -10;
+   
+    
+   
+
+} 
+/* row no of loop styling */
+ .row-number{
+    height: 30px;
+    width: 30px;
+    background-color:#27ae60;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid;
+    
+    
+}
+.column-tag{
+    height: 30px;
+    position: fixed;
+    background: #27ae60;
+    /* wrt to body move from top 20% */
+    top: 20vh;
+    left: 30px;
+    display: flex;
+    z-index: -10;
+}
+ .column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+   flex-shrink: 0;
+   background-color: #27ae60;
+   border: none;
+   border-right: 1px solid;
+   color: white;
+}
+ .cell-section{
+    height:calc(76vh - 30px);
+    width: calc(100vw - 30px);
+    /* absolute so relative must be grid nearest relative parent */
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    overflow: auto;
+}
+.cell{
+    width: 80px;
+    height: 30px;
+    border: 1px solid;
+    flex-shrink: 0;
+    outline: none;
+}
+/* cell selected for highlighting the cell */
+.cell-selected{
+    border: 2px solid rgb(84, 84, 202);
+}
+.row{
+    display: flex;
+}   
+
+.menubar-options div{
+    height: 100%;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bold-italics-underline,.align-cell-content,.cell-color-options{
+    
+    width:23%
+
+}
+.font-type-size{
+   
+    width:31%;
+}
