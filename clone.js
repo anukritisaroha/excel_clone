@@ -62,7 +62,7 @@ formulainput.addEventListener("keypress",function(e){
         let valobj={};
         for(let i=0;i<cellsinformula.length;i++){
             let cellvalue=dataobj[cellsinformula[i]].value;
-            valobj[cellsinformula]=cellvalue;//value of new upstream store in valobj coress to cell address
+            valobj[cellsinformula[i]]=cellvalue;//value of new upstream store in valobj coress to cell address
         }
         for(let key in valobj){
             typedformulaininput=typedformulaininput.replace(key,valobj[key]);
