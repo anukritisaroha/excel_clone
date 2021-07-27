@@ -140,7 +140,13 @@ for(let i=1;i<=100;i++){    // dryrun i=1
             align:"left",
             color:"black",
             bgColor:"white",
-           
+            bold:"normal",
+            italics:"normal",
+            underline:"none",
+            
+
+            
+            
         };
         
         let celldiv=document.createElement("div")
@@ -219,6 +225,20 @@ for(let i=1;i<=100;i++){    // dryrun i=1
 // let b1cell=document.querySelector("[data-address='B1']");
 // a1cell.innerText=20;
 // b1cell.innerText=40;
+
+
+//ab jb hum refresh kre page data gayab na ho excel se yha isliye kia kyoki data obj me sb updated values milegi yha
+if (localStorage.getItem("sheet")) {
+    console.log(1);
+    dataobj = JSON.parse(localStorage.getItem("sheet"));
+  
+    for (let x in dataobj) {
+      let cell = document.querySelector(`[data-address='${x}']`);
+      if (dataobj[x].value)
+      cell.innerText = dataobj[x].value;
+      // dataObj[x]
+    }
+  }
 
 //function creation
 function removefromdownstream(parentcell,childcell){
